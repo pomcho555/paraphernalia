@@ -11,9 +11,8 @@ find . -name "*.epub" -print0 | while IFS= read -r -d '' file; do
 	eval cd "${target_dir}"
 	#echo "ebook-convert $escaped ./pdfs/${filename%.epub}.pdf"
 	if [ ! -f ./${filename%.epub}.pdf ]; then
-    echo "doesn't"
 		#/opt/homebrew/bin/ebook-convert "${filename}" "./${filename%.epub}.pdf"
 	fi
-  echo "Done ${filename}"
+  	echo "Done ${filename}"
 	cd ..
 done
